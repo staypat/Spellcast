@@ -14,4 +14,11 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     margin-top: 50px;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+}
+
+.button:hover {
+    background-color: rgba(174, 255, 158, 0);
+    scale: 1.1 1.1;
 }
