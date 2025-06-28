@@ -10,5 +10,5 @@ public abstract class Card : ScriptableObject
     public string rarity;
     public Sprite art;
 
-    public abstract void PlayCard(Player player = null, Character target = null);
+    // public abstract void PlayCard(Player player = null, Character target = null);
 }
