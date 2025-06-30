@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Card : ScriptableObject
 {
     [Header("Card Info")]
-    public string name;
+    public string cardName;
     public int manaCost;
     public string rarity;
     public Sprite art;
