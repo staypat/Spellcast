@@ -18,7 +18,7 @@ public class MainMenuEvents : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _document = GetComponent<UIDocument>();
 
-        _button = _document.rootVisualElement.Q("StartGameButton") as Button;
+        _button = _document.rootVisualElement.Q<Button>("StartGameButton");
         _button.RegisterCallback<ClickEvent>(OnPlayGameClick);
 
         _menuButtons = _document.rootVisualElement.Query<Button>().ToList();
