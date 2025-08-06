@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Card
 {
-    private readonly CardData cardData;
-    public Sprite sprite { get => cardData.sprite; }
     public string title { get => cardData.name; }
     public string cardClass { get => cardData.cardClass; }
+    public Sprite sprite { get => cardData.sprite; }
     public int cost { get; set; }
     public string effect { get; set; }
+
+    private readonly CardData cardData;
 
     public Card(CardData cardData)
     {
         this.cardData = cardData;
         cost = cardData.cost;
-        effect = cardData.effect;
+        effect = cardData.description;
     }
 
     public void PerformEffect()

@@ -127,17 +127,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3125339871639537184, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814897777767650295, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 5435525388852284132, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7591557846422669493, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
       propertyPath: m_Name
-      value: CardView
+      value: CardViewHover
       objectReference: {fileID: 0}
     - target: {fileID: 7591557846422669493, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127870489244780096, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127870489244780096, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127870489244780096, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 9127870489244780096, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,6 +341,17 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &927212835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1207068079375992355, guid: d2bb771f71d8e844894cb07aa530336f, type: 3}
+  m_PrefabInstance: {fileID: 454335343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e238731064777d442863a8582a6bfdb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1208226872
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handView: {fileID: 1897615581}
+  cardData: {fileID: 11400000, guid: 8aae4bd4615cb1c4995f11287af79a13, type: 2}
 --- !u!4 &1208226874
 Transform:
   m_ObjectHideFlags: 0
@@ -361,6 +393,51 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.245068, y: -1.0040146, z: 0.03342652}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1221793048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1221793050}
+  - component: {fileID: 1221793049}
+  m_Layer: 0
+  m_Name: CardViewHoverSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1221793049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221793048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1531f9774def474f95ab4facfaedaf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardViewHover: {fileID: 927212835}
+--- !u!4 &1221793050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221793048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.47460145, y: -0.14739412, z: 0.017373096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -594,7 +671,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 808529444}
-  - {fileID: 454335343}
   - {fileID: 1897615580}
   - {fileID: 1692267053}
   - {fileID: 1208226874}
+  - {fileID: 1221793050}
+  - {fileID: 454335343}
