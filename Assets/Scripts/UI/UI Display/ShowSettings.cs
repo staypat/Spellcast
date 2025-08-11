@@ -8,7 +8,7 @@ public class ShowSettings : MonoBehaviour
     {
         if (settingsPanel != null)
         {
-            settingsPanel.SetActive(true);
+            settingsPanel.SetActive(!settingsPanel.activeSelf);
         }
     }
 }

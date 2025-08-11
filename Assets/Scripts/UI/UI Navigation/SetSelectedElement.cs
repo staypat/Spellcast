@@ -4,13 +4,11 @@ using UnityEngine.UI;
 
 public class SetSelectedElement : MonoBehaviour
 {
-    [SerializeField] private Selectable elementToSelect;
-
-    public void SelectElement()
+    public void SelectElement(GameObject elementToSelect)
     {
-        if (elementToSelect != null && elementToSelect.gameObject.activeSelf)
+        if (elementToSelect != null && elementToSelect.activeSelf)
         {
-            EventSystem.current.SetSelectedGameObject(elementToSelect.gameObject);
+            EventSystem.current.SetSelectedGameObject(elementToSelect);
         }
     }
 }

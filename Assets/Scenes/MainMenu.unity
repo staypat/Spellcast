@@ -483,6 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57943901}
   - component: {fileID: 57943902}
+  - component: {fileID: 57943903}
   m_Layer: 0
   m_Name: MainButtons
   m_TagString: Untagged
@@ -539,6 +540,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &57943903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57943900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd506256b23d7f04f8c9cfc3090fecf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &110436356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1497,7 @@ GameObject:
   - component: {fileID: 205961065}
   - component: {fileID: 205961064}
   - component: {fileID: 205961063}
+  - component: {fileID: 205961066}
   m_Layer: 0
   m_Name: ExtrasButton
   m_TagString: Untagged
@@ -1554,7 +1568,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 205961064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowExtrasTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &205961064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,6 +1619,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205961061}
   m_CullTransparentMesh: 1
+--- !u!114 &205961066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205961061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b6742f764d6db4396943b228096d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTabSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowExtrasTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &230209580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +1980,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 252496629}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336376996}
+        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
+        m_MethodName: ShowSettingsPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 57943903}
+        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
+        m_MethodName: SelectElement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2065085199}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &252496629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2069,7 +2146,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 269392390}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336376996}
+        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
+        m_MethodName: ShowSettingsPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 57943903}
+        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
+        m_MethodName: SelectElement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2065085199}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &269392390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3103,6 +3204,7 @@ GameObject:
   - component: {fileID: 558829249}
   - component: {fileID: 558829248}
   - component: {fileID: 558829247}
+  - component: {fileID: 558829250}
   m_Layer: 0
   m_Name: GameplayButton
   m_TagString: Untagged
@@ -3173,7 +3275,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 558829248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowGameplayTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &558829248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3212,6 +3326,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558829245}
   m_CullTransparentMesh: 1
+--- !u!114 &558829250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558829245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b6742f764d6db4396943b228096d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTabSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowGameplayTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &575573935
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,6 +5745,7 @@ GameObject:
   - component: {fileID: 957911864}
   - component: {fileID: 957911863}
   - component: {fileID: 957911862}
+  - component: {fileID: 957911865}
   m_Layer: 0
   m_Name: AudioButton
   m_TagString: Untagged
@@ -5674,7 +5816,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 957911863}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowAudioTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &957911863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5713,6 +5867,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957911860}
   m_CullTransparentMesh: 1
+--- !u!114 &957911865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957911860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b6742f764d6db4396943b228096d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTabSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowAudioTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &981950333
 GameObject:
   m_ObjectHideFlags: 0
@@ -6157,7 +6338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1104647454}
   m_Layer: 0
-  m_Name: SoundOptions
+  m_Name: AudioOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6458,7 +6639,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1121036061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336376996}
+        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
+        m_MethodName: ShowSettingsPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 57943903}
+        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
+        m_MethodName: SelectElement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2065085199}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1121036061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6785,6 +6990,7 @@ GameObject:
   - component: {fileID: 1176794271}
   - component: {fileID: 1176794270}
   - component: {fileID: 1176794269}
+  - component: {fileID: 1176794272}
   m_Layer: 0
   m_Name: GraphicsButton
   m_TagString: Untagged
@@ -6855,7 +7061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1176794270}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowGraphicsTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1176794270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6894,6 +7112,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176794267}
   m_CullTransparentMesh: 1
+--- !u!114 &1176794272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176794267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b6742f764d6db4396943b228096d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTabSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowGraphicsTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1203950386
 GameObject:
   m_ObjectHideFlags: 0
@@ -6903,6 +7148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203950387}
+  - component: {fileID: 1203950388}
   m_Layer: 0
   m_Name: SettingsUI
   m_TagString: Untagged
@@ -6932,6 +7178,29 @@ Transform:
   - {fileID: 654807975}
   m_Father: {fileID: 605885737}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203950388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203950386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1b7b9ac314dde4f82728afcc3f5e0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tabs:
+  - type: 0
+    tabUI: {fileID: 1676862539}
+  - type: 1
+    tabUI: {fileID: 2020852288}
+  - type: 2
+    tabUI: {fileID: 1104647453}
+  - type: 3
+    tabUI: {fileID: 1871243305}
+  - type: 4
+    tabUI: {fileID: 654807974}
 --- !u!1 &1222771475
 GameObject:
   m_ObjectHideFlags: 0
@@ -7352,7 +7621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238.247, y: 0.000022888}
+  m_AnchoredPosition: {x: 200, y: 0}
   m_SizeDelta: {x: 1384.399, y: 698.441}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1256058883
@@ -7764,7 +8033,6 @@ GameObject:
   - component: {fileID: 1336376993}
   - component: {fileID: 1336376992}
   - component: {fileID: 1336376996}
-  - component: {fileID: 1336376995}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -7848,13 +8116,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1336376995}
+      - m_Target: {fileID: 57943903}
         m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
         m_MethodName: SelectElement
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 558829245}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7898,19 +8166,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336376990}
   m_CullTransparentMesh: 1
---- !u!114 &1336376995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336376990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd506256b23d7f04f8c9cfc3090fecf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elementToSelect: {fileID: 558829247}
 --- !u!114 &1336376996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8137,7 +8392,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1408810325}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336376996}
+        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
+        m_MethodName: ShowSettingsPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 57943903}
+        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
+        m_MethodName: SelectElement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2065085199}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1408810325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9169,7 +9448,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1711525733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336376996}
+        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
+        m_MethodName: ShowSettingsPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 57943903}
+        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
+        m_MethodName: SelectElement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2065085199}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1711525733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10255,6 +10558,7 @@ GameObject:
   - component: {fileID: 1941657958}
   - component: {fileID: 1941657957}
   - component: {fileID: 1941657956}
+  - component: {fileID: 1941657959}
   m_Layer: 0
   m_Name: ControlsButton
   m_TagString: Untagged
@@ -10325,7 +10629,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1941657957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowControlsTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1941657957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10364,6 +10680,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941657954}
   m_CullTransparentMesh: 1
+--- !u!114 &1941657959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941657954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b6742f764d6db4396943b228096d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onTabSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1203950388}
+        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
+        m_MethodName: ShowControlsTab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1952106108
 GameObject:
   m_ObjectHideFlags: 0
