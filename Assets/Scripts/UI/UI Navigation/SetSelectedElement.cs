@@ -8,7 +8,7 @@ public class SetSelectedElement : MonoBehaviour
 
     public void SelectElement()
     {
-        if (elementToSelect != null)
+        if (elementToSelect != null && elementToSelect.gameObject.activeSelf)
         {
             EventSystem.current.SetSelectedGameObject(elementToSelect.gameObject);
         }
