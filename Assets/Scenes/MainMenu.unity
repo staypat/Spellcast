@@ -1568,19 +1568,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 205961064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1203950388}
-        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
-        m_MethodName: ShowExtrasTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &205961064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1981,25 +1969,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1336376996}
-        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
-        m_MethodName: ShowSettingsPanel
+      - m_Target: {fileID: 1336376995}
+        m_TargetAssemblyTypeName: ToggleSettingsUI, Assembly-CSharp
+        m_MethodName: ToggleSettingsPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 57943903}
-        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
-        m_MethodName: SelectElement
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2065085199}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2147,25 +2123,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1336376996}
-        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
-        m_MethodName: ShowSettingsPanel
+      - m_Target: {fileID: 1336376995}
+        m_TargetAssemblyTypeName: ToggleSettingsUI, Assembly-CSharp
+        m_MethodName: ToggleSettingsPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 57943903}
-        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
-        m_MethodName: SelectElement
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2065085199}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3275,19 +3239,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 558829248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1203950388}
-        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
-        m_MethodName: ShowGameplayTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &558829248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5816,19 +5768,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 957911863}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1203950388}
-        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
-        m_MethodName: ShowAudioTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &957911863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6640,25 +6580,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1336376996}
-        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
-        m_MethodName: ShowSettingsPanel
+      - m_Target: {fileID: 1336376995}
+        m_TargetAssemblyTypeName: ToggleSettingsUI, Assembly-CSharp
+        m_MethodName: ToggleSettingsPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 57943903}
-        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
-        m_MethodName: SelectElement
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2065085199}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6736,7 +6664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -243.72192, y: 96}
+  m_AnchoredPosition: {x: -280, y: 96}
   m_SizeDelta: {x: 358.252, y: 275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142922365
@@ -7061,19 +6989,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1176794270}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1203950388}
-        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
-        m_MethodName: ShowGraphicsTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1176794270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7149,6 +7065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1203950387}
   - component: {fileID: 1203950388}
+  - component: {fileID: 1203950389}
   m_Layer: 0
   m_Name: SettingsUI
   m_TagString: Untagged
@@ -7201,6 +7118,19 @@ MonoBehaviour:
     tabUI: {fileID: 1871243305}
   - type: 4
     tabUI: {fileID: 654807974}
+--- !u!114 &1203950389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203950386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab383b045a14da43af1e48531bc977c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActions: {fileID: -944628639613478452, guid: 27970dc29d0ba894881d2ca463cb7158, type: 3}
 --- !u!1 &1222771475
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,7 +7142,7 @@ GameObject:
   - component: {fileID: 1222771476}
   - component: {fileID: 1222771477}
   m_Layer: 0
-  m_Name: SettingsButtons
+  m_Name: SettingsTabButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8032,7 +7962,7 @@ GameObject:
   - component: {fileID: 1336376994}
   - component: {fileID: 1336376993}
   - component: {fileID: 1336376992}
-  - component: {fileID: 1336376996}
+  - component: {fileID: 1336376995}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -8104,25 +8034,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1336376996}
-        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
-        m_MethodName: ShowSettingsPanel
+      - m_Target: {fileID: 1336376995}
+        m_TargetAssemblyTypeName: ToggleSettingsUI, Assembly-CSharp
+        m_MethodName: ToggleSettingsPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 57943903}
-        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
-        m_MethodName: SelectElement
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 558829245}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8166,7 +8084,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336376990}
   m_CullTransparentMesh: 1
---- !u!114 &1336376996
+--- !u!114 &1336376995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8175,10 +8093,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1336376990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff7a5d088e4ae54aa02f57de89e0fdf, type: 3}
+  m_Script: {fileID: 11500000, guid: ec1c31ed9089ea648b75fdfcb04647ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1203950386}
+  setSelectedElement: {fileID: 57943903}
+  playFirstSelectedGO: {fileID: 2065085199}
+  settingsFirstSelectedGO: {fileID: 558829245}
+  settingsDropdowns:
+  - {fileID: 36698984}
+  - {fileID: 230209582}
 --- !u!1 &1376926680
 GameObject:
   m_ObjectHideFlags: 0
@@ -8393,25 +8317,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1336376996}
-        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
-        m_MethodName: ShowSettingsPanel
+      - m_Target: {fileID: 1336376995}
+        m_TargetAssemblyTypeName: ToggleSettingsUI, Assembly-CSharp
+        m_MethodName: ToggleSettingsPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 57943903}
-        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
-        m_MethodName: SelectElement
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2065085199}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9449,25 +9361,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1336376996}
-        m_TargetAssemblyTypeName: ShowSettings, Assembly-CSharp
-        m_MethodName: ShowSettingsPanel
+      - m_Target: {fileID: 1336376995}
+        m_TargetAssemblyTypeName: ToggleSettingsUI, Assembly-CSharp
+        m_MethodName: ToggleSettingsPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 57943903}
-        m_TargetAssemblyTypeName: SetSelectedElement, Assembly-CSharp
-        m_MethodName: SelectElement
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2065085199}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10629,19 +10529,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1941657957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1203950388}
-        m_TargetAssemblyTypeName: SettingsTabManager, Assembly-CSharp
-        m_MethodName: ShowControlsTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1941657957
 MonoBehaviour:
   m_ObjectHideFlags: 0
