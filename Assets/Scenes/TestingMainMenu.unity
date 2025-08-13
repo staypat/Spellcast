@@ -483,7 +483,6 @@ GameObject:
   m_Component:
   - component: {fileID: 57943901}
   - component: {fileID: 57943902}
-  - component: {fileID: 57943903}
   m_Layer: 0
   m_Name: MainButtons
   m_TagString: Untagged
@@ -540,18 +539,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &57943903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57943900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd506256b23d7f04f8c9cfc3090fecf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &110436356
 GameObject:
   m_ObjectHideFlags: 0
@@ -8239,7 +8226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1203950386}
-  setSelectedElement: {fileID: 57943903}
   playFirstSelectedGO: {fileID: 2065085199}
   settingsFirstSelectedGO: {fileID: 558829245}
   settingsDropdowns:
