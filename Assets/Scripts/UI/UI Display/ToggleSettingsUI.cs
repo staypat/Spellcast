@@ -1,22 +1,22 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class ToggleSettingsUI : MonoBehaviour
 {
     [SerializeField] private GameObject settingsPanel;
-    [SerializeField] private SetSelectedElement setSelectedElement;
     [SerializeField] private GameObject playFirstSelectedGO;
     [SerializeField] private GameObject settingsFirstSelectedGO;
     [SerializeField] private TMP_Dropdown[] settingsDropdowns;
+    
     private void OnEnable()
     {
-        UIInputHandler.OnCancelPressed += OnCancel;
+        UIInputManager.OnCancelPressed += OnCancel;
     }
 
     private void OnDisable()
     {
-        UIInputHandler.OnCancelPressed -= OnCancel;
+        UIInputManager.OnCancelPressed -= OnCancel;
     }
 
     public void ToggleSettingsPanel()
@@ -28,11 +28,11 @@ public class ToggleSettingsUI : MonoBehaviour
 
             if (!isActive)
             {
-                setSelectedElement.SelectElement(settingsFirstSelectedGO);
+                EventSystem.current.SetSelectedGameObject(settingsFirstSelectedGO);
             }
             else
             {
-                setSelectedElement.SelectElement(playFirstSelectedGO);
+                EventSystem.current.SetSelectedGameObject(playFirstSelectedGO);
             }
         }
     }
@@ -52,6 +52,6 @@ public class ToggleSettingsUI : MonoBehaviour
             }
         }
         settingsPanel.SetActive(false);
-        setSelectedElement.SelectElement(playFirstSelectedGO);
+        EventSystem.current.SetSelectedGameObject(playFirstSelectedGO);
     }
 }
