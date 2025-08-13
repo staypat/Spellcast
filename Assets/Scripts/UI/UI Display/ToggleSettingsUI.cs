@@ -11,12 +11,12 @@ public class ToggleSettingsUI : MonoBehaviour
     
     private void OnEnable()
     {
-        UIInputHandler.OnCancelPressed += OnCancel;
+        UIInputManager.OnCancelPressed += OnCancel;
     }
 
     private void OnDisable()
     {
-        UIInputHandler.OnCancelPressed -= OnCancel;
+        UIInputManager.OnCancelPressed -= OnCancel;
     }
 
     public void ToggleSettingsPanel()
