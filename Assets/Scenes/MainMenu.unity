@@ -1507,9 +1507,9 @@ RectTransform:
   - {fileID: 1250374259}
   m_Father: {fileID: 1222771476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 366.76834, y: -17.7258}
   m_SizeDelta: {x: 220, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &205961063
@@ -3178,9 +3178,9 @@ RectTransform:
   - {fileID: 779228583}
   m_Father: {fileID: 1222771476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 43.83378, y: -17.7258}
   m_SizeDelta: {x: 220, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &558829247
@@ -4195,15 +4195,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7a0193ea514d44ba9019f1a8b1d21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selectables: []
-  _firstSelected: {fileID: 0}
-  _navigateReference: {fileID: 0}
+  Selectables:
+  - {fileID: 900729030}
+  - {fileID: 1711525732}
+  _firstSelected: {fileID: 205961063}
+  _navigateReference: {fileID: -3229208764126323272, guid: 27970dc29d0ba894881d2ca463cb7158, type: 3}
   _selectedAnimationScale: 1.1
   _scaleDuration: 0.25
   _animationExclusions: []
   SoundEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950390}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &703154943
 GameObject:
   m_ObjectHideFlags: 0
@@ -5729,9 +5743,9 @@ RectTransform:
   - {fileID: 6087110}
   m_Father: {fileID: 1222771476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205.30106, y: -17.7258}
   m_SizeDelta: {x: 220, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957911862
@@ -6326,15 +6340,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7a0193ea514d44ba9019f1a8b1d21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selectables: []
-  _firstSelected: {fileID: 0}
-  _navigateReference: {fileID: 0}
+  Selectables:
+  - {fileID: 1509092546}
+  - {fileID: 1990572240}
+  - {fileID: 1675364928}
+  - {fileID: 1408810324}
+  _firstSelected: {fileID: 957911862}
+  _navigateReference: {fileID: -3229208764126323272, guid: 27970dc29d0ba894881d2ca463cb7158, type: 3}
   _selectedAnimationScale: 1.1
   _scaleDuration: 0.25
   _animationExclusions: []
   SoundEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950390}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1112261313
 GameObject:
   m_ObjectHideFlags: 0
@@ -6972,9 +7002,9 @@ RectTransform:
   - {fileID: 1878872144}
   m_Father: {fileID: 1222771476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 124.56742, y: -17.7258}
   m_SizeDelta: {x: 220, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1176794269
@@ -7104,7 +7134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1203950387
 Transform:
   m_ObjectHideFlags: 0
@@ -9291,7 +9321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1676862540
 Transform:
   m_ObjectHideFlags: 0
@@ -9331,9 +9361,7 @@ MonoBehaviour:
   _navigateReference: {fileID: -3229208764126323272, guid: 27970dc29d0ba894881d2ca463cb7158, type: 3}
   _selectedAnimationScale: 1.1
   _scaleDuration: 0.25
-  _animationExclusions:
-  - {fileID: 36698982}
-  - {fileID: 136390335}
+  _animationExclusions: []
   SoundEvent:
     m_PersistentCalls:
       m_Calls:
@@ -10336,15 +10364,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7a0193ea514d44ba9019f1a8b1d21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selectables: []
-  _firstSelected: {fileID: 0}
-  _navigateReference: {fileID: 0}
+  Selectables:
+  - {fileID: 252496628}
+  _firstSelected: {fileID: 1941657956}
+  _navigateReference: {fileID: -3229208764126323272, guid: 27970dc29d0ba894881d2ca463cb7158, type: 3}
   _selectedAnimationScale: 1.1
   _scaleDuration: 0.25
   _animationExclusions: []
   SoundEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950390}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1878872143
 GameObject:
   m_ObjectHideFlags: 0
@@ -10670,9 +10711,9 @@ RectTransform:
   - {fileID: 575573936}
   m_Father: {fileID: 1222771476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 286.0347, y: -17.7258}
   m_SizeDelta: {x: 220, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1941657956
@@ -11138,7 +11179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2020852289
 Transform:
   m_ObjectHideFlags: 0
@@ -11170,15 +11211,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7a0193ea514d44ba9019f1a8b1d21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selectables: []
-  _firstSelected: {fileID: 0}
-  _navigateReference: {fileID: 0}
+  Selectables:
+  - {fileID: 230209582}
+  - {fileID: 1073307042}
+  - {fileID: 269392389}
+  _firstSelected: {fileID: 1176794269}
+  _navigateReference: {fileID: -3229208764126323272, guid: 27970dc29d0ba894881d2ca463cb7158, type: 3}
   _selectedAnimationScale: 1.1
   _scaleDuration: 0.25
   _animationExclusions: []
   SoundEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203950390}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2034015382
 GameObject:
   m_ObjectHideFlags: 0
