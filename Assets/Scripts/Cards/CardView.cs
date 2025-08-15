@@ -12,6 +12,7 @@ public class CardView : MonoBehaviour
     [SerializeField] private TMP_Text cardClass;
     [SerializeField] private SpriteRenderer cardImage;
     [SerializeField] private GameObject wrapper;
+    [SerializeField] private LayerMask dropAreaLayer;
 
     public Card card { get; private set; }
     private Vector3 dragStartPosition;
@@ -71,9 +72,10 @@ public class CardView : MonoBehaviour
     {
         if (!Interactions.Instance.PlayerCanInteract())
             return;
-        if(Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 10f))
+        if(Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 10f, dropAreaLayer))
         {
-            // play card
+            PlayCardGA playCardGA = new(card);
+            ActionSystem.Instance.Perform(playCardGA);
         }
         else
         {
