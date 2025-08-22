@@ -23,7 +23,7 @@ public class CardView : MonoBehaviour
         this.card = card;
         title.text = card.title;
         cost.text = card.cost.ToString();
-        description.text = card.effect;
+        description.text = card.description;
         cardClass.text = card.cardClass;
         cardImage.sprite = card.sprite;
     }
@@ -72,7 +72,9 @@ public class CardView : MonoBehaviour
     {
         if (!Interactions.Instance.PlayerCanInteract())
             return;
-        if(Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 10f, dropAreaLayer))
+        if(ManaSystem.Instance.HasEnoughMana(card.cost)
+        && Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 10f, dropAreaLayer))
+
         {
             PlayCardGA playCardGA = new(card);
             ActionSystem.Instance.Perform(playCardGA);

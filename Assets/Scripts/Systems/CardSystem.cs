@@ -39,7 +39,6 @@ public class CardSystem : Singleton<CardSystem>
             Card card = new(cardData);
             drawPile.Add(card);
         }
-
     }
 
     private IEnumerator DrawCardsPerformer(DrawCardsGA drawCardsGA)
@@ -77,7 +76,15 @@ public class CardSystem : Singleton<CardSystem>
         hand.Remove(playCardGA.card);
         CardView cardView = handView.RemoveCard(playCardGA.card);
         yield return DiscardCard(cardView);
-        // Perform card effect here
+
+        SpendManaGA spendManaGA = new(playCardGA.card.cost);
+        ActionSystem.Instance.AddReaction(spendManaGA);
+
+        foreach (var effect in playCardGA.card.effects)
+        {
+            PerformEffectGA performEffectGA = new(effect);
+            ActionSystem.Instance.AddReaction(performEffectGA);
+        }
     }
 
     // Reactions
@@ -110,6 +117,7 @@ public class CardSystem : Singleton<CardSystem>
 
     private IEnumerator DiscardCard(CardView cardView)
     {
+        discardPile.Add(cardView.card);
         cardView.transform.DOScale(Vector3.zero, 0.15f);
         Tween tween = cardView.transform.DOMove(discardPilePoint.position, 0.15f);
         yield return tween.WaitForCompletion();
