@@ -709,6 +709,9 @@ MonoBehaviour:
   cardClass: {fileID: 3365607469548684906}
   cardImage: {fileID: 5429111447972234099}
   wrapper: {fileID: 1143683669536620690}
+  dropAreaLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!210 &3814897777767650295
 SortingGroup:
   m_ObjectHideFlags: 0

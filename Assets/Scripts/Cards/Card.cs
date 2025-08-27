@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Card
 {
-    public string title { get => cardData.name; }
-    public string cardClass { get => cardData.cardClass; }
-    public Sprite sprite { get => cardData.sprite; }
+    public string title => cardData.name; 
+    public string description => cardData.description;
+    public string cardClass => cardData.cardClass; 
+    public Sprite sprite => cardData.sprite; 
+    public List<Effect> effects => cardData.Effects;
     public int cost { get; set; }
-    public string effect { get; set; }
 
     private readonly CardData cardData;
 
@@ -16,11 +17,5 @@ public class Card
     {
         this.cardData = cardData;
         cost = cardData.cost;
-        effect = cardData.description;
-    }
-
-    public void PerformEffect()
-    {
-        Debug.Log(effect + " Performed & Cost of " + cost + " paid.");
     }
 }
