@@ -6,6 +6,7 @@ public class LoadScene : MonoBehaviour
     public enum Scene
     {
         MainMenu,
+        Map,
         Game
     }
 
