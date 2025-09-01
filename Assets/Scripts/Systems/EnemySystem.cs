@@ -1,23 +1,50 @@
+using DG.Tweening;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySystem : MonoBehaviour
+public class EnemySystem : Singleton<EnemySystem>
 {
+    [SerializeField] private EnemyBoardView enemyBoardView;
+
     private void OnEnable()
     {
         ActionSystem.AttachPerformer<EnemyTurnGA>(EnemyTurnPerformer);
+        ActionSystem.AttachPerformer<AttackHeroGA>(AttackHeroPerformer);
     }
 
     private void OnDisable()
     {
         ActionSystem.DetachPerformer<EnemyTurnGA>();
+        ActionSystem.DetachPerformer<AttackHeroGA>();
+    }
+
+    public void Setup(List<EnemyData> enemyDatas)
+    {
+        foreach(var enemyData in enemyDatas)
+        {
+            enemyBoardView.AddEnemy(enemyData);
+        }
     }
 
     // Performers
     private IEnumerator EnemyTurnPerformer(EnemyTurnGA enemyTurnGA)
     {
-        Debug.Log("Enemy Turn");
-        yield return new WaitForSeconds(2f);
-        Debug.Log("End Enemy Turn");
+        foreach (var enemy in enemyBoardView.enemyViews)
+        {
+            AttackHeroGA attackHeroGA = new(enemy);
+            ActionSystem.Instance.AddReaction(attackHeroGA);
+        }
+        yield return null;
+    }
+
+    private IEnumerator AttackHeroPerformer(AttackHeroGA attackHeroGA)
+    {
+        EnemyView attacker = attackHeroGA.attacker;
+        Tween tween = attacker.transform.DOMoveX(attacker.transform.position.x - 1f, 0.15f);
+        yield return tween.WaitForCompletion();
+        attacker.transform.DOMoveX(attacker.transform.position.x + 1f, 0.25f);
+        DealDamageGA dealDamageGA = new(attacker.attackPower, new() { HeroSystem.Instance.heroView });
+        ActionSystem.Instance.AddReaction(dealDamageGA);
     }
 }
