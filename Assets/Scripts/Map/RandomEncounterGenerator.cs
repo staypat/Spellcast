@@ -1,7 +1,15 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using TMPro;
 public class RandomEncounterGenerator : MonoBehaviour
 {
+    public TMP_Text encounterText;
+    private EncounterType encounter;
+
+    private void OnEnable()
+    {
+        generateRandomEncounter();
+    }
     public enum EncounterType
     {
         None,
@@ -22,10 +30,17 @@ public class RandomEncounterGenerator : MonoBehaviour
         return type.ToString();
     }
 
-    public void printRandomEncounter()
+    public void generateRandomEncounter()
     {
-        EncounterType randomType = getRandomEncounterType();
-        Debug.Log("Random Encounter Type: " + getEncounterTypeName(randomType));
-        Debug.Log("Random Encounter Index: " + (int)randomType);
+        encounter = getRandomEncounterType();
+        encounterText.text = getEncounterTypeName(encounter);
+    }
+
+    public void goToEncounter()
+    {
+        if (encounter == EncounterType.None){
+            return;
+        }
+        SceneManager.LoadScene(getEncounterTypeName(encounter));
     }
 }
