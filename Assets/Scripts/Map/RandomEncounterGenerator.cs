@@ -6,23 +6,34 @@ public class RandomEncounterGenerator : MonoBehaviour
     public TMP_Text encounterText;
     private EncounterType encounter;
 
-    private void OnEnable()
+    private void Start()
     {
-        generateRandomEncounter();
+        generateRandomEncounter(); // remove line if you move functionality to MapManager.cs
     }
     public enum EncounterType
     {
         None,
-        Shop,
         Enemy,
         Elite,
         Occurrence,
+        Shop,
         Boss
     }
 
     public EncounterType getRandomEncounterType()
     {
-        return (EncounterType)Random.Range(0, System.Enum.GetValues(typeof(EncounterType)).Length);
+        if (MapManager.instance.currentEncounterIndex == 6)
+        {
+            return EncounterType.Shop;
+        }
+        else if (MapManager.instance.currentEncounterIndex == 7)
+        {
+            return EncounterType.Boss;
+        }
+        else
+        {
+            return (EncounterType)Random.Range(0, 4);
+        }
     }
 
     public string getEncounterTypeName(EncounterType type)
@@ -38,9 +49,12 @@ public class RandomEncounterGenerator : MonoBehaviour
 
     public void goToEncounter()
     {
-        if (encounter == EncounterType.None){
+        if (encounter == EncounterType.None)
+        {
             return;
         }
+
+        MapManager.instance.currentEncounterIndex++;
         SceneManager.LoadScene(getEncounterTypeName(encounter));
     }
 }
