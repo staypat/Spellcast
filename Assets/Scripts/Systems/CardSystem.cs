@@ -64,7 +64,6 @@ public class CardSystem : Singleton<CardSystem>
     {
         foreach(var card in hand)
         {
-            discardPile.Add(card);
             CardView cardView = handView.RemoveCard(card);
             yield return DiscardCard(cardView);
         }
@@ -80,9 +79,16 @@ public class CardSystem : Singleton<CardSystem>
         SpendManaGA spendManaGA = new(playCardGA.card.cost);
         ActionSystem.Instance.AddReaction(spendManaGA);
 
-        foreach (var effect in playCardGA.card.effects)
+        if (playCardGA.card.manualTargetEffect != null)
         {
-            PerformEffectGA performEffectGA = new(effect);
+            PerformEffectGA performEffectGA = new(playCardGA.card.manualTargetEffect, new() { playCardGA.manualTarget });
+            ActionSystem.Instance.AddReaction(performEffectGA);
+        }
+
+        foreach (var effectWrapper in playCardGA.card.otherEffects)
+        {
+            List<CombatantView> targets = effectWrapper.targetMode.GetTargets();
+            PerformEffectGA performEffectGA = new(effectWrapper.effect, targets);
             ActionSystem.Instance.AddReaction(performEffectGA);
         }
     }

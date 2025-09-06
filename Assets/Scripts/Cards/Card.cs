@@ -8,7 +8,8 @@ public class Card
     public string description => cardData.description;
     public string cardClass => cardData.cardClass; 
     public Sprite sprite => cardData.sprite; 
-    public List<Effect> effects => cardData.Effects;
+    public Effect manualTargetEffect => cardData.manualTargetEffect;
+    public List<AutoTargetEffect> otherEffects => cardData.otherEffects;
     public int cost { get; set; }
 
     private readonly CardData cardData;
