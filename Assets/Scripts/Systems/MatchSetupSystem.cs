@@ -5,6 +5,7 @@ using UnityEngine;
 public class MatchSetupSystem : MonoBehaviour
 {
     [SerializeField] private HeroData heroData;
+    [SerializeField] private RelicData relicData;
     [SerializeField] private List<EnemyData> enemyDatas;
 
     private void Start()
@@ -12,6 +13,7 @@ public class MatchSetupSystem : MonoBehaviour
         HeroSystem.Instance.Setup(heroData);
         EnemySystem.Instance.Setup(enemyDatas);
         CardSystem.Instance.Setup(heroData.deck);
+        RelicSystem.Instance.AddRelic(new Relic(relicData));
 
         RefillManaGA refillManaGA = new();
         ActionSystem.Instance.Perform(refillManaGA, () =>

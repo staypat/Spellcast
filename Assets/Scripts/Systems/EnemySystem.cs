@@ -35,6 +35,12 @@ public class EnemySystem : Singleton<EnemySystem>
     {
         foreach (var enemy in enemyBoardView.enemyViews)
         {
+            int meltStacks = enemy.GetStatusEffectStacks(StatusEffectType.MELT);
+            if (meltStacks > 0)
+            {
+                ApplyMeltGA applyMeltGA = new(meltStacks, enemy);
+                ActionSystem.Instance.AddReaction(applyMeltGA);
+            }
             AttackHeroGA attackHeroGA = new(enemy);
             ActionSystem.Instance.AddReaction(attackHeroGA);
         }
@@ -47,7 +53,7 @@ public class EnemySystem : Singleton<EnemySystem>
         Tween tween = attacker.transform.DOMoveX(attacker.transform.position.x - 1f, 0.15f);
         yield return tween.WaitForCompletion();
         attacker.transform.DOMoveX(attacker.transform.position.x + 1f, 0.25f);
-        DealDamageGA dealDamageGA = new(attacker.attackPower, new() { HeroSystem.Instance.heroView });
+        DealDamageGA dealDamageGA = new(attacker.attackPower, new() { HeroSystem.Instance.heroView }, attackHeroGA.caster);
         ActionSystem.Instance.AddReaction(dealDamageGA);
     }
 
