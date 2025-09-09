@@ -19,8 +19,6 @@ public class CardSystem : Singleton<CardSystem>
         ActionSystem.AttachPerformer<DrawCardsGA>(DrawCardsPerformer);
         ActionSystem.AttachPerformer<DiscardAllCardsGA>(DiscardAllCardsPerformer);
         ActionSystem.AttachPerformer<PlayCardGA>(PlayCardPerformer);
-        ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyTurnPreReaction, ReactionTiming.PRE);
-        ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
     }
 
     private void OnDisable()
@@ -28,8 +26,6 @@ public class CardSystem : Singleton<CardSystem>
         ActionSystem.DetachPerformer<DrawCardsGA>();
         ActionSystem.DetachPerformer<DiscardAllCardsGA>();
         ActionSystem.DetachPerformer<PlayCardGA>();
-        ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPreReaction, ReactionTiming.PRE);
-        ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
     }
 
     public void Setup(List<CardData> deckData)
@@ -64,7 +60,6 @@ public class CardSystem : Singleton<CardSystem>
     {
         foreach(var card in hand)
         {
-            discardPile.Add(card);
             CardView cardView = handView.RemoveCard(card);
             yield return DiscardCard(cardView);
         }
@@ -80,24 +75,17 @@ public class CardSystem : Singleton<CardSystem>
         SpendManaGA spendManaGA = new(playCardGA.card.cost);
         ActionSystem.Instance.AddReaction(spendManaGA);
 
-        foreach (var effect in playCardGA.card.effects)
+        if (playCardGA.card.manualTargetEffect != null)
         {
-            PerformEffectGA performEffectGA = new(effect);
+            PerformEffectGA performEffectGA = new(playCardGA.card.manualTargetEffect, new() { playCardGA.manualTarget });
             ActionSystem.Instance.AddReaction(performEffectGA);
         }
-    }
-
-    // Reactions
-    private void EnemyTurnPreReaction(EnemyTurnGA enemyTurnGA)
-    {
-        DiscardAllCardsGA discardAllCardsGA = new();
-        ActionSystem.Instance.AddReaction(discardAllCardsGA);
-    }
-
-    private void EnemyTurnPostReaction(EnemyTurnGA enemyTurnGA)
-    {
-        DrawCardsGA drawCardsGA = new(5);
-        ActionSystem.Instance.AddReaction(drawCardsGA);
+        foreach (var effectWrapper in playCardGA.card.otherEffects)
+        {
+            List<CombatantView> targets = effectWrapper.targetMode.GetTargets();
+            PerformEffectGA performEffectGA = new(effectWrapper.effect, targets);
+            ActionSystem.Instance.AddReaction(performEffectGA);
+        }
     }
 
     // Helpers

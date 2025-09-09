@@ -4,9 +4,8 @@ using UnityEngine;
 public class ManaSystem : Singleton<ManaSystem>
 {
     [SerializeField] private ManaUI manaUI;
-
-    private const int MAX_MANA = 3;
-    private int currentMana = MAX_MANA;
+    [SerializeField] private int maxMana;
+    private int currentMana;
 
     private void OnEnable()
     {
@@ -36,7 +35,7 @@ public class ManaSystem : Singleton<ManaSystem>
 
     private IEnumerator RefillManaPerformer(RefillManaGA refillManaGA)
     {
-        currentMana = MAX_MANA;
+        currentMana = maxMana;
         manaUI.UpdateManaText(currentMana);
         yield return null;
     }
