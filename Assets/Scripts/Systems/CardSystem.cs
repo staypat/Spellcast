@@ -75,12 +75,15 @@ public class CardSystem : Singleton<CardSystem>
         SpendManaGA spendManaGA = new(playCardGA.card.cost);
         ActionSystem.Instance.AddReaction(spendManaGA);
 
-        if (playCardGA.card.manualTargetEffect != null)
+        if (playCardGA.card.delayedEffects != null)
         {
-            PerformEffectGA performEffectGA = new(playCardGA.card.manualTargetEffect, new() { playCardGA.manualTarget });
-            ActionSystem.Instance.AddReaction(performEffectGA);
+            foreach (var effect in playCardGA.card.delayedEffects)
+            {
+                PerformEffectGA performEffectGA = new(effect, new() { playCardGA.target });
+                ActionSystem.Instance.AddReaction(performEffectGA);
+            }
         }
-        foreach (var effectWrapper in playCardGA.card.otherEffects)
+        foreach (var effectWrapper in playCardGA.card.instantEffects)
         {
             List<CombatantView> targets = effectWrapper.targetMode.GetTargets();
             PerformEffectGA performEffectGA = new(effectWrapper.effect, targets);

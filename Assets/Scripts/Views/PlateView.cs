@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Plate : MonoBehaviour
+public class PlateView : MonoBehaviour
 {
-    public EnemyView targetEnemy { get; private set; } // the enemy this plate is assigned to
     private List<GameAction> stack = new(); // stack of actions to perform when plate is triggered
+    public EnemyView target;
 
-    public Plate(EnemyView targetEnemy) // constructor
+    public void Setup(EnemyView target)
     {
-        this.targetEnemy = targetEnemy;
+        this.target = target;
     }
 
     public void AddAction(GameAction action) // add GameAction to stack

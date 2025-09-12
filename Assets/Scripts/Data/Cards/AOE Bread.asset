@@ -16,22 +16,19 @@ MonoBehaviour:
   <description>k__BackingField: Deal 10 damage to all enemies.
   <cardClass>k__BackingField: Bread
   <sprite>k__BackingField: {fileID: 21300000, guid: 2a251164859955b4aa4c4ab544176ff0, type: 3}
-  <manualTargetEffect>k__BackingField:
-    rid: -2
-  <otherEffects>k__BackingField:
+  <delayedEffects>k__BackingField: []
+  <instantEffects>k__BackingField:
   - <targetMode>k__BackingField:
-      rid: 1889653798444204108
+      rid: 1889653938214404176
     <effect>k__BackingField:
-      rid: 1889653798444204109
+      rid: 1889653938214404177
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 1889653798444204108
+    - rid: 1889653938214404176
       type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
       data: 
-    - rid: 1889653798444204109
+    - rid: 1889653938214404177
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 10
