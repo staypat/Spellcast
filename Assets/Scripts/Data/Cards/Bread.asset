@@ -16,13 +16,13 @@ MonoBehaviour:
   <description>k__BackingField: Deal 5 damage.
   <cardClass>k__BackingField: Bread
   <sprite>k__BackingField: {fileID: 21300000, guid: 2a251164859955b4aa4c4ab544176ff0, type: 3}
-  <manualTargetEffect>k__BackingField:
-    rid: 1889653804575490121
-  <otherEffects>k__BackingField: []
+  <delayedEffects>k__BackingField:
+  - rid: 1889653938214404179
+  <instantEffects>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 1889653804575490121
+    - rid: 1889653938214404179
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
         damageAmount: 5

@@ -31,15 +31,15 @@ public class ActionSystem : Singleton<ActionSystem>
 
     private IEnumerator Flow(GameAction action, Action OnFlowFinished = null)
     {
-        reactions = action.PreReactions;
+        reactions = action.preReactions;
         PerformSubscribers(action, preSubs);
         yield return PerformReactions();
 
-        reactions = action.PerformReactions;
+        reactions = action.performReactions;
         yield return PerformPerformer(action);
         yield return PerformReactions();
 
-        reactions = action.PostReactions;
+        reactions = action.postReactions;
         PerformSubscribers(action, postSubs);
         yield return PerformReactions();
 

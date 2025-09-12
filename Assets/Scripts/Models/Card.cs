@@ -7,9 +7,9 @@ public class Card
     public string title => cardData.name; 
     public string description => cardData.description;
     public string cardClass => cardData.cardClass; 
-    public Sprite sprite => cardData.sprite; 
-    public Effect manualTargetEffect => cardData.manualTargetEffect;
-    public List<AutoTargetEffect> otherEffects => cardData.otherEffects;
+    public Sprite sprite => cardData.sprite;
+    public List<Effect> delayedEffects => cardData.delayedEffects;
+    public List<AutoTargetEffect> instantEffects => cardData.instantEffects;
     public int cost { get; set; }
 
     private readonly CardData cardData;

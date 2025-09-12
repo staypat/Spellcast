@@ -16,23 +16,20 @@ MonoBehaviour:
   <description>k__BackingField: Apply 3 Melt to all enemies.
   <cardClass>k__BackingField: Jam
   <sprite>k__BackingField: {fileID: 21300000, guid: 1def3b974d6c9fc409e9eacbdbe1ac39, type: 3}
-  <manualTargetEffect>k__BackingField:
-    rid: -2
-  <otherEffects>k__BackingField:
+  <delayedEffects>k__BackingField: []
+  <instantEffects>k__BackingField:
   - <targetMode>k__BackingField:
-      rid: 1889653845728165962
+      rid: 1889653938214404178
     <effect>k__BackingField:
-      rid: 1889653845728165963
+      rid: 1889653938214404169
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 1889653845728165962
-      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 1889653845728165963
+    - rid: 1889653938214404169
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 1
         stackCount: 3
+    - rid: 1889653938214404178
+      type: {class: AllEnemiesTM, ns: , asm: Assembly-CSharp}
+      data: 
