@@ -13,4 +13,18 @@ public class PlateSystem : Singleton<PlateSystem>
             plateBoardView.AddPlate(enemy);
         }
     }
+    private void OnEnable()
+    {
+        ActionSystem.SubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
+    }
+
+    private void OnDisable()
+    {
+        ActionSystem.UnsubscribeReaction<EnemyTurnGA>(EnemyTurnPostReaction, ReactionTiming.POST);
+    }
+
+    private void EnemyTurnPostReaction(EnemyTurnGA enemyTurnGA)
+    {
+        plateBoardView.UpdatePlates();
+    }
 }

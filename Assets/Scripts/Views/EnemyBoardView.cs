@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyBoardView : MonoBehaviour
 {
     [SerializeField] private List<Transform> slots;
+    [SerializeField] private PlateBoardView plateBoardView;
     public List<EnemyView> enemyViews { get; private set; } = new();
 
     public void AddEnemy(EnemyData enemyData)

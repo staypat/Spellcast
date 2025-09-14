@@ -471,6 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d063b27ba67f2448c92b32d8d90a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plateBoardView: {fileID: 1473730044}
 --- !u!114 &567987623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,6 +981,7 @@ MonoBehaviour:
   - {fileID: 1951771141}
   - {fileID: 991340063}
   - {fileID: 1596594498}
+  plateBoardView: {fileID: 1473730044}
 --- !u!1 &856026888
 GameObject:
   m_ObjectHideFlags: 0

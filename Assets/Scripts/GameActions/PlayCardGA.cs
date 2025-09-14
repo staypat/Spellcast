@@ -3,17 +3,11 @@ using UnityEngine;
 public class PlayCardGA : GameAction
 {
     public Card card { get; set; }
-    public EnemyView target { get; private set; }
+    public PlateView plate { get; private set; }
 
-    public PlayCardGA(Card card)
+    public PlayCardGA(Card card, PlateView plate)
     {
         this.card = card;
-        target = null;
-    }
-
-    public PlayCardGA(Card card, EnemyView target)
-    {
-        this.card = card;
-        this.target = target;
+        this.plate = plate;
     }
 }
