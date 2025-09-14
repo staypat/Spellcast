@@ -116,4 +116,11 @@ public class ActionSystem : Singleton<ActionSystem>
             subs[typeof (T)].Remove(wrappedReaction);
         }
     }
+
+    public void Stop()
+    {
+        StopAllCoroutines();
+        reactions.Clear();
+        IsPerforming = false;
+    }
 }

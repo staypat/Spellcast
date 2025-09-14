@@ -18,9 +18,22 @@ public class PlateBoardView : MonoBehaviour
 
     public IEnumerator RemovePlate(PlateView plateView)
     {
+        plateView.serving = false;
         plateViews.Remove(plateView);
         Tween tween = plateView.transform.DOScale(Vector3.zero, 0.25f);
         yield return tween.WaitForCompletion();
         Destroy(plateView.gameObject);
+    }
+
+    public void UpdatePlates()
+    {
+        List<PlateView> platesToRemove = new();
+        foreach (var plate in plateViews)
+        {
+            if (plate.target == null)
+                platesToRemove.Add(plate);
+        }
+        foreach (var plate in platesToRemove)
+            StartCoroutine(RemovePlate(plate));
     }
 }

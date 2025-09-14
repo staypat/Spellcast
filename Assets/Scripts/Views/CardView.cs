@@ -97,7 +97,7 @@ public class CardView : MonoBehaviour
                 && Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit, 10f, dropAreaLayer))
             {
                 PlateView hitPlate = hit.collider.gameObject.GetComponent<PlateView>();
-                PlayCardGA playCardGA = new(card, hitPlate.target);
+                PlayCardGA playCardGA = new(card, hitPlate);
                 ActionSystem.Instance.Perform(playCardGA);
             }
             else
