@@ -27,7 +27,7 @@ public class CombatantView : MonoBehaviour
 
     public void Damage(int damageAmount)
     {
-        int remainingDamage = damageAmount;
+        int remainingDamage = damageAmount + GetStatusEffectStacks(StatusEffectType.STICKY);
         int currentBlock = GetStatusEffectStacks(StatusEffectType.BLOCK);
         if (currentBlock > 0)
         {

@@ -1,5 +1,6 @@
 public enum StatusEffectType
 {
     BLOCK,
-    MELT
+    MELT,
+    STICKY
 }
