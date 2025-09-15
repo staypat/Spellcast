@@ -17,12 +17,12 @@ MonoBehaviour:
   <cardClass>k__BackingField: Jam
   <sprite>k__BackingField: {fileID: 21300076, guid: 09e4c6a7d75923945afe43953ef58ad2, type: 3}
   <delayedEffects>k__BackingField:
-  - rid: 8489166888511471691
+  - rid: 8489166888511471692
   <instantEffects>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 8489166888511471691
+    - rid: 8489166888511471692
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 2
