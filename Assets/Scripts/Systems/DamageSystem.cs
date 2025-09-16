@@ -34,6 +34,9 @@ public class DamageSystem : MonoBehaviour
                 {
                     //game over soooo
                     //do some game over stuff
+                    // show Game Over screen
+                    // TODO: Implement Game Over screen
+                    Debug.Log("Game Over");
                 }
             }
         }
