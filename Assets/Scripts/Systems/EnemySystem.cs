@@ -2,11 +2,13 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemySystem : Singleton<EnemySystem>
 {
     [SerializeField] private EnemyBoardView enemyBoardView;
     public List<EnemyView> enemies => enemyBoardView.enemyViews;
+    [SerializeField] private UnityEvent allEnemiesDefeatedEvent;
 
     private void OnEnable()
     {
@@ -62,8 +64,12 @@ public class EnemySystem : Singleton<EnemySystem>
     private IEnumerator KillEnemyPerformer(KillEnemyGA killEnemyGA)
     {
         yield return enemyBoardView.RemoveEnemy(killEnemyGA.enemyView);
+        if (enemyBoardView.enemyViews.Count == 0)
+        {
+            allEnemiesDefeatedEvent.Invoke();
+        }
     }
-    
+
     private void EnemyTurnPostReaction(EnemyTurnGA enemyTurnGA)
     {
         foreach (var enemy in enemies)
