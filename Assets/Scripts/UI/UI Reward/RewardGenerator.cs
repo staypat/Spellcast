@@ -6,6 +6,9 @@ public class RewardGenerator : MonoBehaviour
     [SerializeField] private List<CardUI> cardRewards;
     [SerializeField] private List<CardData> possibleCards;
 
+    // TODO: Add logic for gold
+    // TODO: Add logic for relics
+
     public void GenerateCardReward()
     {
         foreach (CardUI cardUI in cardRewards)
