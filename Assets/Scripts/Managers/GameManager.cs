@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+        // on awake -> check what game state we're in -> if we're in battle, load variables into matchsetup system -> matchsetup system starts with those variables
+        // and then you could have it do other things on awake when the game state is different
+        // like store or map
     }
 
     public enum GameState

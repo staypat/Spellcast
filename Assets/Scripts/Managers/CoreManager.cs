@@ -11,5 +11,4 @@ public class CoreManager : MonoBehaviour
             .Load(SceneDatabase.Slots.Menu, SceneDatabase.Scenes.MainMenu)
             .Perform();
     }
-
 }
