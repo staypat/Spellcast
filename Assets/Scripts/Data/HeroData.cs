@@ -4,7 +4,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Hero")]
 public class HeroData : ScriptableObject
 {
-    [field: SerializeField] public Sprite image {  get; private set; }
+    [field: SerializeField] public Sprite image { get; private set; }
     [field: SerializeField] public int health { get; private set; }
-    [field: SerializeField] public List<CardData> deck {  get; private set; }
+    [field: SerializeField] public List<CardData> deck { get; private set; }
+    
+    public HeroData DeepCopy()
+    {
+        HeroData copy = Instantiate(this);
+        copy.deck = new List<CardData>(this.deck);
+        return copy;
+    }
 }

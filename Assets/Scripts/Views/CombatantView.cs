@@ -50,9 +50,11 @@ public class CombatantView : MonoBehaviour
                 currentHealth = 0;
             }
         }
-
-        transform.DOShakePosition(0.2f, 0.5f);
-        UpdateHealthText();
+        if (this != null)
+        {
+            transform.DOShakePosition(0.2f, 0.5f);
+            UpdateHealthText();
+        }
     }
 
     public void AddStatusEffect(StatusEffectType type, int stackCount)

@@ -14,6 +14,7 @@ public static class SceneDatabase
     {
         public const string MainMenu = "MainMenu";
         public const string Session = "Session";
+        public const string Map = "Map";
         public const string Match = "Match";
         public const string Shop = "Shop";
     }

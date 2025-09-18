@@ -10,10 +10,10 @@ public class MatchSetupSystem : MonoBehaviour
 
     private void Start()
     {
-        HeroSystem.Instance.Setup(heroData);
+        HeroSystem.Instance.Setup(GameManager.Instance.heroDataRuntime);
         EnemySystem.Instance.Setup(enemyDatas);
         PlateSystem.Instance.Setup(EnemySystem.Instance.enemies);
-        CardSystem.Instance.Setup(heroData.deck);
+        CardSystem.Instance.Setup(GameManager.Instance.heroDataRuntime.deck);
         RelicSystem.Instance.AddRelic(new Relic(relicData));
 
         RefillManaGA refillManaGA = new();
