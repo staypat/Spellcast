@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public static class MouseUtil
@@ -12,5 +14,10 @@ public static class MouseUtil
             return ray.GetPoint(distance);
         }
         return Vector3.zero;
+    }
+
+    public static void SetCamera()
+    {
+        camera = Camera.main;
     }
 }
