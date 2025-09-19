@@ -50,7 +50,7 @@ public class CombatantView : MonoBehaviour
                 currentHealth = 0;
             }
         }
-
+        
         transform.DOShakePosition(0.2f, 0.5f);
         UpdateHealthText();
     }

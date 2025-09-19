@@ -13,10 +13,10 @@ public class ShopManager : MonoBehaviour
             .Perform();
     }
 
-    public void SwitchToMatch()
+    public void SwitchToMap()
     {
         SceneController.Instance.NewTransition()
-            .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.Match, setActive: true)
+            .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.Map, setActive: true)
             .WithOverlay()
             .Perform();
     }

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Map.unity
     guid: 0e68c226cb3b6ab4381a5701be680916
   - enabled: 1
+    path: Assets/Scenes/Match.unity
+    guid: dca43c73d4043bf4caf5362a33de1f45
+  - enabled: 1
     path: Assets/Scenes/Encounters/Enemy.unity
     guid: 0682ee1b8a217174ca5e07887d9a94c1
   - enabled: 1

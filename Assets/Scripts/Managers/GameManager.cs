@@ -1,9 +1,12 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    [SerializeField] private HeroData heroData;
+    public HeroData heroDataRuntime;
 
     private void Awake()
     {
@@ -16,6 +19,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+
+        heroDataRuntime = heroData.DeepCopy();
     }
 
     public enum GameState

@@ -50,27 +50,32 @@ public class RandomEncounterGenerator : MonoBehaviour
         }
 
         MapManager.instance.currentEncounterIndex++;
-        SceneManager.LoadScene(encounterTypeToString(encounterType));
+        // SceneManager.LoadScene(encounterTypeToString(encounterType));
+        SceneController.Instance.NewTransition()
+            .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.Match, setActive: true)
+            .WithOverlay()
+            .Perform();
     }
 
     private void SpawnPaths()
     {
         int numPaths = (MapManager.instance.currentEncounterIndex == 6 || MapManager.instance.currentEncounterIndex == 7) ? 1 : Random.Range(2, 4);
 
-        float verticalSpacing = -60f;
-        float horizontalOffset = 55f;
-        float verticalOffset = 80f;
+        float verticalSpacing = -230f;
+        float horizontalOffset = 161f;
+        float verticalOffset = 250f;
 
         for (int i = 0; i < numPaths; i++)
         {
-            // Make the path button and its position
+            // Make the path button
             GameObject pathButton = Instantiate(pathButtonPrefab, pathButtonParent);
             float x = (i % 2 == 0) ? horizontalOffset : -horizontalOffset;
             float y = i * verticalSpacing + verticalOffset;
             pathButton.transform.localPosition = new Vector3(x, y, 0);
-
+            
             // Randomly assign encounter type
             EncounterType encounter = getRandomEncounterType();
+            pathButton.GetComponentInChildren<TMP_Text>().text = encounterTypeToString(encounter);
 
             // Add onClick listener
             Button button = pathButton.GetComponent<Button>();
