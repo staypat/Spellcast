@@ -1,4 +1,3 @@
-using Mono.Cecil.Cil;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +14,8 @@ public class MatchSetupSystem : MonoBehaviour
         PlateSystem.Instance.Setup(EnemySystem.Instance.enemies);
         CardSystem.Instance.Setup(GameManager.Instance.heroDataRuntime.deck);
         RelicSystem.Instance.AddRelic(new Relic(relicData));
+        MouseUtil.SetCamera();
+        ActionSystem.Instance.CheckSubs();
 
         RefillManaGA refillManaGA = new();
         ActionSystem.Instance.Perform(refillManaGA, () =>

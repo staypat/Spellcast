@@ -12,6 +12,7 @@ public class ActionSystem : Singleton<ActionSystem>
 
     private static Dictionary<Type, List<Action<GameAction>>> preSubs = new();
     private static Dictionary<Type, List<Action<GameAction>>> postSubs = new();
+    private static Dictionary<Delegate, Action<GameAction>> wrappedDelegates = new();
     private static Dictionary<Type, Func<GameAction, IEnumerator>> performers = new();
     public void Perform(GameAction action, Action OnPerformFinished = null)
     {
@@ -95,26 +96,51 @@ public class ActionSystem : Singleton<ActionSystem>
     public static void SubscribeReaction<T>(Action<T> reaction, ReactionTiming timing) where T : GameAction
     {
         Dictionary<Type, List<Action<GameAction>>> subs = timing == ReactionTiming.PRE ? preSubs : postSubs;
-        void wrappedReaction(GameAction action) => reaction((T)action);
-        if(subs.ContainsKey(typeof(T)))
+
+        if (wrappedDelegates.ContainsKey(reaction))
+            return;
+
+        Action<GameAction> wrappedReaction = action => reaction((T)action);
+        wrappedDelegates[reaction] = wrappedReaction;
+
+        if (!subs.TryGetValue(typeof(T), out var list))
         {
-            subs[typeof(T)].Add(wrappedReaction);
+            list = new List<Action<GameAction>>();
+            subs[typeof(T)] = list;
         }
-        else
-        {
-            subs.Add(typeof(T), new());
-            subs[typeof(T)].Add(wrappedReaction);
-        }
+
+        list.Add(wrappedReaction);
+        //if(subs.ContainsKey(typeof(T)))
+        //{
+        //    subs[typeof(T)].Add(wrappedReaction);
+        //}
+        //else
+        //{
+        //    subs.Add(typeof(T), new());
+        //    subs[typeof(T)].Add(wrappedReaction);
+        //}
     }
 
     public static void UnsubscribeReaction<T>(Action<T> reaction, ReactionTiming timing) where T : GameAction
     {
         Dictionary<Type, List<Action<GameAction>>> subs = timing == ReactionTiming.PRE ? preSubs : postSubs;
-        if(subs.ContainsKey(typeof(T)))
+
+        if (wrappedDelegates.TryGetValue(reaction, out var wrappedReaction))
         {
-            void wrappedReaction(GameAction action) => reaction((T)action);
-            subs[typeof (T)].Remove(wrappedReaction);
+            if (subs.TryGetValue(typeof(T), out var list))
+            {
+                list.Remove(wrappedReaction);
+            }
+
+            wrappedDelegates.Remove(reaction);
         }
+        //if(subs.ContainsKey(typeof(T)))
+        //{
+        //    Action<GameAction> wrappedReaction(GameAction action) => reaction((T)action);
+
+        //    subs[typeof(T)].Find(wrappedReaction);
+        //    subs[typeof(T)].Remove(wrappedReaction);
+        //}
     }
 
     public void Stop()
@@ -122,5 +148,17 @@ public class ActionSystem : Singleton<ActionSystem>
         StopAllCoroutines();
         reactions.Clear();
         IsPerforming = false;
+    }
+
+    public void CheckSubs()
+    {
+        foreach (var sub in preSubs)
+        {
+            Debug.Log("Presub: " + sub.Key.ToString() + "      " + sub.Value.Count);
+        }
+        foreach (var sub in postSubs)
+        {
+            Debug.Log("Postsub: " + sub.Key.ToString() + "      " + sub.Value.Count);
+        }
     }
 }
