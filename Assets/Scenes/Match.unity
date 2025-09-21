@@ -3040,18 +3040,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1340641468}
-        m_TargetAssemblyTypeName: RewardSelectUI, Assembly-CSharp
-        m_MethodName: AddCardToDeck
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 35a6300ccfba7f44f91c24ca7302841b, type: 2}
-          m_ObjectArgumentAssemblyTypeName: CardData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1413376082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4395,7 +4383,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1340641468}
         m_TargetAssemblyTypeName: RewardSelectUI, Assembly-CSharp
-        m_MethodName: OnRewardSelected
+        m_MethodName: HideRewardSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

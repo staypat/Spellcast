@@ -14,20 +14,16 @@ public class RewardSelectUI : MonoBehaviour
     public void HideRewardSelect()
     {
         rewardSelectPanel.SetActive(false);
-    }
-    
-    public void AddCardToDeck(CardData cardData)
-    {
-        GameManager.Instance.heroDataRuntime.deck.Add(cardData);
+        SceneController.Instance.NewTransition()
+            .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.Map, setActive: true)
+            .WithOverlay()
+            .Perform();
     }
 
     public void OnRewardSelected()
     {
         HideRewardSelect();
+        rewardGenerator.AddCardToDeck();
         Debug.Log("Reward Selected!");
-        SceneController.Instance.NewTransition()
-            .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.Map, setActive: true)
-            .WithOverlay()
-            .Perform();
     }
 }
