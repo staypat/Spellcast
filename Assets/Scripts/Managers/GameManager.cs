@@ -19,8 +19,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
-
-        heroDataRuntime = heroData.DeepCopy();
+        ResetRunData();
     }
 
     public enum GameState
@@ -62,5 +61,10 @@ public class GameManager : MonoBehaviour
         CurrentState = newState;
         OnAfterStateChanged?.Invoke(newState);
         Debug.Log("Game State changed to: " + CurrentState);
+    }
+
+    public void ResetRunData()
+    {
+        heroDataRuntime = heroData.DeepCopy();
     }
 }

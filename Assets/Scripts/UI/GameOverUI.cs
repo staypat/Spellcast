@@ -25,6 +25,7 @@ public class GameOverUI : MonoBehaviour
 
     public void RestartGame()
     {
+        GameManager.Instance.ResetRunData();
         SceneController.Instance.NewTransition()
             .Load(SceneDatabase.Slots.Menu, SceneDatabase.Scenes.MainMenu)
             .Unload(SceneDatabase.Slots.SessionContent)
