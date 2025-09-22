@@ -32,10 +32,7 @@ public class DamageSystem : MonoBehaviour
                 }
                 else
                 {
-                    //game over soooo
-                    //do some game over stuff
-                    // show Game Over screen
-                    // TODO: Implement Game Over screen
+                    GameManager.Instance.ChangeGameState(GameManager.GameState.GameOver);
                     Debug.Log("Game Over");
                 }
             }
