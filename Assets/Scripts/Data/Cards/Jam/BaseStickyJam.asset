@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9863f352ac0ebf349b980b7036a050aa, type: 3}
-  m_Name: StickyJam
+  m_Name: BaseStickyJam
   m_EditorClassIdentifier: 
   <cost>k__BackingField: 1
   <description>k__BackingField: Apply 1 Sticky.
