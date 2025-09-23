@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9863f352ac0ebf349b980b7036a050aa, type: 3}
-  m_Name: BaseStickyJam
+  m_Name: BaseMeltJam
   m_EditorClassIdentifier: 
   <cost>k__BackingField: 1
-  <description>k__BackingField: Apply 1 Sticky.
+  <description>k__BackingField: Apply 1 Melt.
   <cardClass>k__BackingField: Jam
   <sprite>k__BackingField: {fileID: 21300078, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
   <delayedEffects>k__BackingField:
-  - rid: 8489166888511471692
+  - rid: 8489167067075575883
   <instantEffects>k__BackingField: []
   references:
     version: 2
     RefIds:
-    - rid: 8489166888511471692
+    - rid: 8489167067075575883
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 2
+        statusEffectType: 1
         stackCount: 1

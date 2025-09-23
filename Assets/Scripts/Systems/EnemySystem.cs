@@ -78,6 +78,10 @@ public class EnemySystem : Singleton<EnemySystem>
             {
                 enemy.RemoveStatusEffect(StatusEffectType.STICKY, 1);
             }
+            if (enemy.GetStatusEffectStacks(StatusEffectType.SPREAD) > 0)
+            {
+                enemy.RemoveStatusEffect(StatusEffectType.SPREAD, 1);
+            }
         }
     }
 }
