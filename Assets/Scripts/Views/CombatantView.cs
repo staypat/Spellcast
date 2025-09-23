@@ -25,7 +25,7 @@ public class CombatantView : MonoBehaviour
         healthText.text = "HP: " + currentHealth;
     }
 
-    public void Damage(int damageAmount)
+    public virtual void Damage(int damageAmount)
     {
         int remainingDamage = damageAmount + GetStatusEffectStacks(StatusEffectType.STICKY);
         int currentBlock = GetStatusEffectStacks(StatusEffectType.BLOCK);

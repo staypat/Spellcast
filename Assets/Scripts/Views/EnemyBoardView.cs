@@ -24,4 +24,11 @@ public class EnemyBoardView : MonoBehaviour
         yield return tween.WaitForCompletion();
         Destroy(enemyView.gameObject);
     }
+    public void GetAdjacentEnemies(EnemyView enemyView, out EnemyView leftEnemy, out EnemyView rightEnemy)
+    {
+        int index = enemyViews.IndexOf(enemyView);
+        leftEnemy = index > 0 ? enemyViews[index - 1] : null;
+        rightEnemy = index < enemyViews.Count - 1 ? enemyViews[index + 1] : null;
+        Debug.Log("Left: " + leftEnemy + ", Right: " + rightEnemy);
+    }
 }
