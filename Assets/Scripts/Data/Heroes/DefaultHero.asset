@@ -15,8 +15,8 @@ MonoBehaviour:
   <image>k__BackingField: {fileID: 21300000, guid: f4a86cecddf6b53449569b1c2207d9a3, type: 3}
   <health>k__BackingField: 40
   <deck>k__BackingField:
-  - {fileID: 11400000, guid: 8aae4bd4615cb1c4995f11287af79a13, type: 2}
   - {fileID: 11400000, guid: 854bf09a0dd042d449ea744d7fb6b708, type: 2}
-  - {fileID: 11400000, guid: 76f40987c01c4e14b8ccb794a2f008a0, type: 2}
-  - {fileID: 11400000, guid: 57692ae3027dde44a8a71714f894c166, type: 2}
+  - {fileID: 11400000, guid: 854bf09a0dd042d449ea744d7fb6b708, type: 2}
+  - {fileID: 11400000, guid: 854bf09a0dd042d449ea744d7fb6b708, type: 2}
+  - {fileID: 11400000, guid: 28f7ae7cbbd4ace4584eb6b43ca6f859, type: 2}
   - {fileID: 11400000, guid: 28f7ae7cbbd4ace4584eb6b43ca6f859, type: 2}
