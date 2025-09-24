@@ -79,13 +79,13 @@ public class CardSystem : Singleton<CardSystem>
         {
             foreach (var effect in playCardGA.card.delayedEffects)
             {
-                PerformEffectGA performEffectGA = new(effect, new() { playCardGA.plate.target });
+                PerformEffectGA performEffectGA = new(effect, new() { playCardGA.plate.target }, playCardGA.plate);
                 playCardGA.plate.AddAction(performEffectGA);            }
         }
         foreach (var effectWrapper in playCardGA.card.instantEffects)
         {
             List<CombatantView> targets = effectWrapper.targetMode.GetTargets();
-            PerformEffectGA performEffectGA = new(effectWrapper.effect, targets);
+            PerformEffectGA performEffectGA = new(effectWrapper.effect, targets, playCardGA.plate);
             ActionSystem.Instance.AddReaction(performEffectGA);
         }
     }

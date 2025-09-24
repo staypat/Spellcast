@@ -13,19 +13,24 @@ public class ConditionalEffect : Effect
     [SerializeField] private Condition condition;
     [field: SerializeReference, SR] public Effect effectConditionNotMet { get; set; }
     [field: SerializeReference, SR] public Effect effectConditionMet { get; set; }
+
     public override GameAction GetGameAction(List<CombatantView> targets, CombatantView caster)
+    {
+        return GetGameAction(targets, caster, null);
+    }
+    public GameAction GetGameAction(List<CombatantView> targets, CombatantView caster, PlateView plate)
     {
         bool conditionMet = false;
         switch (condition)
         {
             case Condition.onlyCardOnPlate:
-                conditionMet = true;
+                conditionMet = plate.stack.Count == 1;
                 break;
             case Condition.aboveBread:
                 conditionMet = false;
                 break;
             case Condition.aboveJam:
-                conditionMet = true;
+                conditionMet = false;
                 break;
         }
 

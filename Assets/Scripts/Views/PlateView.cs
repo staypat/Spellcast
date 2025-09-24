@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlateView : MonoBehaviour
 {
-    private List<GameAction> stack = new(); // stack of actions to perform when plate is triggered
+    public List<GameAction> stack = new(); // stack of actions to perform when plate is triggered
     public EnemyView target;
     public bool serving = false;
 
