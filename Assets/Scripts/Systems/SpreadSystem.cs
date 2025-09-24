@@ -16,16 +16,21 @@ public class SpreadSystem : MonoBehaviour
     {
         int damageAmount = applySpreadGA.damageAmount;
         float spreadRatio = applySpreadGA.spreadRatio;
+        int spreadDamage = (int)(damageAmount * spreadRatio);
         EnemyView target = applySpreadGA.target;
+        if (spreadDamage <= 0)
+        {
+            yield break;
+        }
         enemyBoardView.GetAdjacentEnemies(target, out EnemyView leftEnemy, out EnemyView rightEnemy);
         if (leftEnemy != null)
         {
-            leftEnemy.Damage((int)(damageAmount * spreadRatio));
+            leftEnemy.Damage(spreadDamage);
             yield return new WaitForSeconds(0.5f);
         }
         if (rightEnemy != null)
         {
-            rightEnemy.Damage((int)(damageAmount * spreadRatio));
+            rightEnemy.Damage(spreadDamage);
             yield return new WaitForSeconds(0.5f);
         }
         yield return null;
