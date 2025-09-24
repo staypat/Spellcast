@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AboveBreadMelt
   m_EditorClassIdentifier: 
   <cost>k__BackingField: 1
-  <description>k__BackingField: Apply 1 Melt. If played Above Bread, apply 2 Melt
+  <description>k__BackingField: Apply 1 Melt. If played Above Bread, apply 5 Melt
     instead.
   <cardClass>k__BackingField: Jam
   <sprite>k__BackingField: {fileID: 21300078, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
@@ -26,6 +26,7 @@ MonoBehaviour:
     - rid: 8489167094612492365
       type: {class: ConditionalEffect, ns: , asm: Assembly-CSharp}
       data:
+        condition: 1
         <effectConditionNotMet>k__BackingField:
           rid: 8489167094612492366
         <effectConditionMet>k__BackingField:
@@ -39,4 +40,4 @@ MonoBehaviour:
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
         statusEffectType: 1
-        stackCount: 2
+        stackCount: 5

@@ -80,7 +80,8 @@ public class CardSystem : Singleton<CardSystem>
             foreach (var effect in playCardGA.card.delayedEffects)
             {
                 PerformEffectGA performEffectGA = new(effect, new() { playCardGA.plate.target }, playCardGA.plate);
-                playCardGA.plate.AddAction(performEffectGA);            }
+                playCardGA.plate.AddAction(performEffectGA, playCardGA.card.cardClass);
+            }
         }
         foreach (var effectWrapper in playCardGA.card.instantEffects)
         {

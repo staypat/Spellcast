@@ -27,10 +27,10 @@ public class ConditionalEffect : Effect
                 conditionMet = plate.stack.Count == 1;
                 break;
             case Condition.aboveBread:
-                conditionMet = false;
+                conditionMet = plate.lastPlayedCardClass == "Bread";
                 break;
             case Condition.aboveJam:
-                conditionMet = false;
+                conditionMet = plate.lastPlayedCardClass == "Jam";
                 break;
         }
 
