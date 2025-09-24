@@ -25,6 +25,7 @@ public class PlateView : MonoBehaviour
         {
             if (target != null)
             {
+                Debug.Log($"Performing: " + action);
                 ActionSystem.Instance.Perform(action);
                 yield return new WaitWhile(() => ActionSystem.Instance.IsPerforming);
             }
