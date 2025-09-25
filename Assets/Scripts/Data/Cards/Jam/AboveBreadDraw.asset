@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9863f352ac0ebf349b980b7036a050aa, type: 3}
+  m_Name: AboveBreadDraw
+  m_EditorClassIdentifier: 
+  <cost>k__BackingField: 0
+  <description>k__BackingField: If served Above Bread, draw 1 card.
+  <cardClass>k__BackingField: Jam
+  <sprite>k__BackingField: {fileID: 21300078, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
+  <delayedEffects>k__BackingField:
+  - rid: 8489167133252780120
+  <instantEffects>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8489167133252780120
+      type: {class: ConditionalEffect, ns: , asm: Assembly-CSharp}
+      data:
+        condition: 1
+        <effectConditionNotMet>k__BackingField:
+          rid: 8489167133252780121
+        <effectConditionMet>k__BackingField:
+          rid: 8489167133252780122
+    - rid: 8489167133252780121
+      type: {class: DoNothingEffect, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 8489167133252780122
+      type: {class: DrawCardsEffect, ns: , asm: Assembly-CSharp}
+      data:
+        drawAmount: 1
