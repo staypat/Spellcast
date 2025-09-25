@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9863f352ac0ebf349b980b7036a050aa, type: 3}
+  m_Name: DamageAboveJamBlock
+  m_EditorClassIdentifier: 
+  <cost>k__BackingField: 2
+  <description>k__BackingField: Deal 15 damage. If served Above Jam, also gain 5
+    Block.
+  <cardClass>k__BackingField: Bread
+  <sprite>k__BackingField: {fileID: 21300000, guid: 2a251164859955b4aa4c4ab544176ff0, type: 3}
+  <delayedEffects>k__BackingField:
+  - rid: 8489167113233104974
+  - rid: 8489167113233104975
+  <instantEffects>k__BackingField: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8489167113233104974
+      type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damageAmount: 15
+    - rid: 8489167113233104975
+      type: {class: ConditionalEffect, ns: , asm: Assembly-CSharp}
+      data:
+        condition: 2
+        <effectConditionNotMet>k__BackingField:
+          rid: 8489167113233104977
+        <effectConditionMet>k__BackingField:
+          rid: 8489167113233104976
+    - rid: 8489167113233104976
+      type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
+      data:
+        statusEffectType: 0
+        stackCount: 5
+    - rid: 8489167113233104977
+      type: {class: DoNothingEffect, ns: , asm: Assembly-CSharp}
+      data: 
