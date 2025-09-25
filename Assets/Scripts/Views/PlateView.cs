@@ -26,6 +26,7 @@ public class PlateView : MonoBehaviour
         {
             if (target != null)
             {
+                Debug.Log($"Performing action from card class {action.cardClass}");
                 ActionSystem.Instance.Perform(action.action);
                 yield return new WaitWhile(() => ActionSystem.Instance.IsPerforming);
                 lastPlayedCardClass = action.cardClass;

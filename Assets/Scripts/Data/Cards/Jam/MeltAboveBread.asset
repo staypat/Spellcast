@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9863f352ac0ebf349b980b7036a050aa, type: 3}
-  m_Name: AboveBreadMelt
+  m_Name: MeltAboveBread
   m_EditorClassIdentifier: 
   <cost>k__BackingField: 1
-  <description>k__BackingField: Apply 1 Melt. If played Above Bread, apply 5 Melt
+  <description>k__BackingField: Apply 1 Melt. If served Above Bread, apply 5 Melt
     instead.
   <cardClass>k__BackingField: Jam
   <sprite>k__BackingField: {fileID: 21300078, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
