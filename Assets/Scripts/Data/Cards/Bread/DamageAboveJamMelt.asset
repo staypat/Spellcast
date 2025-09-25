@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9863f352ac0ebf349b980b7036a050aa, type: 3}
-  m_Name: DamageAboveJamBlock
+  m_Name: DamageAboveJamMelt
   m_EditorClassIdentifier: 
   <cost>k__BackingField: 2
-  <description>k__BackingField: Deal 15 damage. If served Above Jam, also gain 5
-    Block.
+  <description>k__BackingField: Deal 7 damage. If served Above Jam, also apply 2
+    Melt.
   <cardClass>k__BackingField: Bread
   <sprite>k__BackingField: {fileID: 21300000, guid: 2a251164859955b4aa4c4ab544176ff0, type: 3}
   <delayedEffects>k__BackingField:
@@ -27,20 +27,20 @@ MonoBehaviour:
     - rid: 8489167113233104974
       type: {class: DealDamageEffect, ns: , asm: Assembly-CSharp}
       data:
-        damageAmount: 15
+        damageAmount: 7
     - rid: 8489167113233104975
       type: {class: ConditionalEffect, ns: , asm: Assembly-CSharp}
       data:
         condition: 2
         <effectConditionNotMet>k__BackingField:
-          rid: 8489167113233104977
+          rid: 8489167133252780108
         <effectConditionMet>k__BackingField:
           rid: 8489167113233104976
     - rid: 8489167113233104976
       type: {class: AddStatusEffectEffect, ns: , asm: Assembly-CSharp}
       data:
-        statusEffectType: 0
-        stackCount: 5
-    - rid: 8489167113233104977
+        statusEffectType: 1
+        stackCount: 2
+    - rid: 8489167133252780108
       type: {class: DoNothingEffect, ns: , asm: Assembly-CSharp}
       data: 
