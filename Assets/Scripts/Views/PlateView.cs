@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlateView : MonoBehaviour
 {
     public List<(GameAction action, string cardClass)> stack = new(); // stack of actions to perform when plate is triggered
+    public List<GameObject> spawnedIngredients = new();
     public EnemyView target;
     public bool serving = false;
     public string lastPlayedCardClass;
@@ -17,6 +18,11 @@ public class PlateView : MonoBehaviour
     public void AddAction(GameAction action, string cardClass) // add GameAction to stack
     {
         stack.Add((action, cardClass));
+    }
+
+    public void TrackIngredient(GameObject ingredientPrefab)
+    {
+        spawnedIngredients.Add(ingredientPrefab);
     }
 
     public IEnumerator Serve() // perform all actions in stack and reset stack; this should also trigger when End Turn button is pressed
@@ -34,5 +40,11 @@ public class PlateView : MonoBehaviour
         serving = false;
         stack.Clear();
         lastPlayedCardClass = null;
+        foreach (var ingredient in spawnedIngredients)
+        {
+            if (ingredient != null)
+                Destroy(ingredient);
+        }
+        spawnedIngredients.Clear();
     }
 }

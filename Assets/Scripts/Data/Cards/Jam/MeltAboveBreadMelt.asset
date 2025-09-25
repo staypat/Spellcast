@@ -16,7 +16,7 @@ MonoBehaviour:
   <description>k__BackingField: Apply 1 Melt. If served Above Bread, apply 2 Melt
     instead.
   <cardClass>k__BackingField: Jam
-  <sprite>k__BackingField: {fileID: 21300078, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
+  <sprite>k__BackingField: {fileID: 21300000, guid: 2fad220c5a45a6d498c7a2d39d635683, type: 3}
   <delayedEffects>k__BackingField:
   - rid: 8489167133252780123
   <instantEffects>k__BackingField: []

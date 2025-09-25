@@ -324,6 +324,7 @@ MonoBehaviour:
   handView: {fileID: 1897615581}
   drawPilePoint: {fileID: 1087602103}
   discardPilePoint: {fileID: 1944417863}
+  plateBoardView: {fileID: 1473730044}
 --- !u!1 &68795476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,6 +3992,8 @@ MonoBehaviour:
   - {fileID: 1527154483}
   - {fileID: 68795477}
   - {fileID: 2100170380}
+  breadPrefab: {fileID: 6094855444696774462, guid: c13193688c8f2e74e87a30ff82b6c8e8, type: 3}
+  jamPrefab: {fileID: 8684098331882310349, guid: a1c907fb96ed3ee4c962e0dc8264435b, type: 3}
 --- !u!1 &1492496885
 GameObject:
   m_ObjectHideFlags: 0
