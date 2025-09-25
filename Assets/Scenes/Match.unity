@@ -324,6 +324,7 @@ MonoBehaviour:
   handView: {fileID: 1897615581}
   drawPilePoint: {fileID: 1087602103}
   discardPilePoint: {fileID: 1944417863}
+  plateBoardView: {fileID: 1473730044}
 --- !u!1 &68795476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,9 +3246,19 @@ MonoBehaviour:
   - {fileID: 268355541}
   - {fileID: 1856740491}
   possibleCards:
-  - {fileID: 11400000, guid: 35a6300ccfba7f44f91c24ca7302841b, type: 2}
-  - {fileID: 11400000, guid: 3431a167564b8464894e141eb0ac5952, type: 2}
-  - {fileID: 11400000, guid: 99f4aef1bab10a44291e429c239b7267, type: 2}
+  - {fileID: 11400000, guid: 0c658f862e4ed234c82d7c89e7a37b70, type: 2}
+  - {fileID: 11400000, guid: 854bf09a0dd042d449ea744d7fb6b708, type: 2}
+  - {fileID: 11400000, guid: a1391f8f24706804ab38aca866c92eb5, type: 2}
+  - {fileID: 11400000, guid: 76f40987c01c4e14b8ccb794a2f008a0, type: 2}
+  - {fileID: 11400000, guid: 28f7ae7cbbd4ace4584eb6b43ca6f859, type: 2}
+  - {fileID: 11400000, guid: 57692ae3027dde44a8a71714f894c166, type: 2}
+  - {fileID: 11400000, guid: f02cf71ea5e697b459047ecb5d68cd70, type: 2}
+  - {fileID: 11400000, guid: d2069ab4c04439e4c91cd4fa54f108ae, type: 2}
+  - {fileID: 11400000, guid: fef4a8cdfcada444a8b1bc8ff682876e, type: 2}
+  - {fileID: 11400000, guid: f02cf71ea5e697b459047ecb5d68cd70, type: 2}
+  - {fileID: 11400000, guid: 43862fe87d854e146996da9f075c874f, type: 2}
+  - {fileID: 11400000, guid: d56ae7c1692fed14b80ea3e7d3d978cf, type: 2}
+  - {fileID: 11400000, guid: 6a138b8853843ce49977a20c983e989e, type: 2}
 --- !u!1 &1343344908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,6 +3992,8 @@ MonoBehaviour:
   - {fileID: 1527154483}
   - {fileID: 68795477}
   - {fileID: 2100170380}
+  breadPrefab: {fileID: 6094855444696774462, guid: c13193688c8f2e74e87a30ff82b6c8e8, type: 3}
+  jamPrefab: {fileID: 8684098331882310349, guid: a1c907fb96ed3ee4c962e0dc8264435b, type: 3}
 --- !u!1 &1492496885
 GameObject:
   m_ObjectHideFlags: 0

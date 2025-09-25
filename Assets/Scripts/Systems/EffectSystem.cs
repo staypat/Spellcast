@@ -15,17 +15,8 @@ public class EffectSystem : MonoBehaviour
 
     private IEnumerator PerformEffectPerformer(PerformEffectGA performEffectGA)
     {
-        if (performEffectGA.effect is ConditionalEffect conditionalEffect)
-        {
-            PlateView plate = performEffectGA.plate;
-            GameAction effectAction = conditionalEffect.GetGameAction(performEffectGA.targets, HeroSystem.Instance.heroView, plate);
-            ActionSystem.Instance.AddReaction(effectAction);
-        }
-        else
-        {
-            GameAction effectAction = performEffectGA.effect.GetGameAction(performEffectGA.targets, HeroSystem.Instance.heroView);
-            ActionSystem.Instance.AddReaction(effectAction);
-            yield return null;
-        }
+        GameAction effectAction = performEffectGA.effect.GetGameAction(performEffectGA.targets, HeroSystem.Instance.heroView);
+        ActionSystem.Instance.AddReaction(effectAction);
+        yield return null;
     }
 }

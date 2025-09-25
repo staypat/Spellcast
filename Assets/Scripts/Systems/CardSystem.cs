@@ -14,6 +14,8 @@ public class CardSystem : Singleton<CardSystem>
     private readonly List<Card> discardPile = new();
     private readonly List<Card> hand = new();
 
+    public PlateBoardView plateBoardView;
+
     private void OnEnable()
     {
         ActionSystem.AttachPerformer<DrawCardsGA>(DrawCardsPerformer);
@@ -79,9 +81,20 @@ public class CardSystem : Singleton<CardSystem>
         {
             foreach (var effect in playCardGA.card.delayedEffects)
             {
-                PerformEffectGA performEffectGA = new(effect, new() { playCardGA.plate.target }, playCardGA.plate);
-                playCardGA.plate.AddAction(performEffectGA, playCardGA.card.cardClass);
+                if (effect is ConditionalEffect conditionalEffect)
+                {
+                    GameAction actualEffect = conditionalEffect.GetGameAction(new List<CombatantView> { playCardGA.plate.target }, HeroSystem.Instance.heroView, playCardGA.plate);
+                    playCardGA.plate.AddAction(actualEffect, playCardGA.card.cardClass);
+                    plateBoardView.SpawnIngredientAbovePlate(playCardGA.card.cardClass, playCardGA.plate);
+                }
+                else
+                {
+                    PerformEffectGA performEffectGA = new(effect, new() { playCardGA.plate.target }, playCardGA.plate);
+                    playCardGA.plate.AddAction(performEffectGA, playCardGA.card.cardClass);
+                    plateBoardView.SpawnIngredientAbovePlate(playCardGA.card.cardClass, playCardGA.plate);
+                }
             }
+            playCardGA.plate.lastPlayedCardClass = playCardGA.card.cardClass;
         }
         foreach (var effectWrapper in playCardGA.card.instantEffects)
         {
