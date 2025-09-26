@@ -13,7 +13,7 @@ public class MatchSetupSystem : MonoBehaviour
         EnemySystem.Instance.Setup(enemyDatas);
         PlateSystem.Instance.Setup(EnemySystem.Instance.enemies);
         CardSystem.Instance.Setup(GameManager.Instance.heroDataRuntime.deck);
-        RelicSystem.Instance.AddRelic(new Relic(relicData));
+        // RelicSystem.Instance.AddRelic(new Relic(relicData));
         MouseUtil.SetCamera();
         ActionSystem.Instance.CheckSubs();
 
