@@ -6370,12 +6370,18 @@ MonoBehaviour:
   m_text: 'Each Enemy has a Plate.
 
 
-    Play card ingredients onto Plates.
+    Drag cards onto a Plate to play them.
 
 
-    At
-    the end of your turn, Plates are served to the corresponding enemy, triggering
-    effects based on what was played'
+    Click
+    on a Plate to Serve to the corresponding enemy.
+
+
+    Cards trigger in the order
+    you placed them.
+
+
+    Plates also automatically Serve at the end of your turn.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
