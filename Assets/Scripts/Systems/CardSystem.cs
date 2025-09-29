@@ -85,15 +85,14 @@ public class CardSystem : Singleton<CardSystem>
                 {
                     GameAction actualEffect = conditionalEffect.GetGameAction(new List<CombatantView> { playCardGA.plate.target }, HeroSystem.Instance.heroView, playCardGA.plate);
                     playCardGA.plate.AddAction(actualEffect, playCardGA.card.cardClass);
-                    plateBoardView.SpawnIngredientAbovePlate(playCardGA.card.cardClass, playCardGA.plate);
                 }
                 else
                 {
                     PerformEffectGA performEffectGA = new(effect, new() { playCardGA.plate.target }, playCardGA.plate);
                     playCardGA.plate.AddAction(performEffectGA, playCardGA.card.cardClass);
-                    plateBoardView.SpawnIngredientAbovePlate(playCardGA.card.cardClass, playCardGA.plate);
                 }
             }
+            plateBoardView.SpawnIngredientAbovePlate(playCardGA.card.cardClass, playCardGA.plate);
             playCardGA.plate.lastPlayedCardClass = playCardGA.card.cardClass;
         }
         foreach (var effectWrapper in playCardGA.card.instantEffects)

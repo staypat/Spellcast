@@ -6,7 +6,6 @@ public class ConditionalEffect : Effect
 {
     public enum Condition
     {
-        onlyCardOnPlate,
         aboveBread,
         aboveJam
     }
@@ -23,9 +22,6 @@ public class ConditionalEffect : Effect
         bool conditionMet = false;
         switch (condition)
         {
-            case Condition.onlyCardOnPlate:
-                conditionMet = plate.stack.Count == 1;
-                break;
             case Condition.aboveBread:
                 conditionMet = plate.lastPlayedCardClass == "Bread";
                 break;

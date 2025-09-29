@@ -24,5 +24,11 @@ public class MapManager : MonoBehaviour
     // 6 is a shop
     // 7 is a boss
     // We instantiate path button prefabs at runtime; there can only be one NONE path at any point AKA the player has at LEAST 2 paths to choose from and 3 paths at most
-    
+    public void GoToMainMenu()
+    {
+        SceneController.Instance.NewTransition()
+            .Load(SceneDatabase.Slots.SessionContent, SceneDatabase.Scenes.MainMenu, true)
+            .WithOverlay()
+            .Perform();
+    }
 }
