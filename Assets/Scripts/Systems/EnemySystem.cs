@@ -45,8 +45,11 @@ public class EnemySystem : Singleton<EnemySystem>
                 ApplyMeltGA applyMeltGA = new(meltStacks, enemy);
                 ActionSystem.Instance.AddReaction(applyMeltGA);
             }
-            AttackHeroGA attackHeroGA = new(enemy);
-            ActionSystem.Instance.AddReaction(attackHeroGA);
+            if (enemy != null)
+            {
+                AttackHeroGA attackHeroGA = new(enemy);
+                ActionSystem.Instance.AddReaction(attackHeroGA);
+            }
         }
         yield return null;
     }
@@ -54,11 +57,14 @@ public class EnemySystem : Singleton<EnemySystem>
     private IEnumerator AttackHeroPerformer(AttackHeroGA attackHeroGA)
     {
         EnemyView attacker = attackHeroGA.attacker;
-        Tween tween = attacker.transform.DOMoveX(attacker.transform.position.x - 1f, 0.15f);
-        yield return tween.WaitForCompletion();
-        attacker.transform.DOMoveX(attacker.transform.position.x + 1f, 0.25f);
-        DealDamageGA dealDamageGA = new(attacker.attackPower, new() { HeroSystem.Instance.heroView }, attackHeroGA.caster);
-        ActionSystem.Instance.AddReaction(dealDamageGA);
+        if (attacker != null)
+        {
+            Tween tween = attacker.transform.DOMoveX(attacker.transform.position.x - 1f, 0.15f);
+            yield return tween.WaitForCompletion();
+            attacker.transform.DOMoveX(attacker.transform.position.x + 1f, 0.25f);
+            DealDamageGA dealDamageGA = new(attacker.attackPower, new() { HeroSystem.Instance.heroView }, attackHeroGA.caster);
+            ActionSystem.Instance.AddReaction(dealDamageGA);
+        }
     }
 
     private IEnumerator KillEnemyPerformer(KillEnemyGA killEnemyGA)

@@ -25,7 +25,7 @@ MonoBehaviour:
     - rid: 8489167133252780120
       type: {class: ConditionalEffect, ns: , asm: Assembly-CSharp}
       data:
-        condition: 1
+        condition: 0
         <effectConditionNotMet>k__BackingField:
           rid: 8489167133252780121
         <effectConditionMet>k__BackingField:

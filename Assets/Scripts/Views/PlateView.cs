@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlateView : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlateView : MonoBehaviour
     public EnemyView target;
     public bool serving = false;
     public string lastPlayedCardClass;
+    [SerializeField] private Canvas serveUI;
+    [SerializeField] private GameObject highlight;
+    private bool uiOpen = false;
 
     public void Setup(EnemyView target)
     {
@@ -46,5 +50,29 @@ public class PlateView : MonoBehaviour
                 Destroy(ingredient);
         }
         spawnedIngredients.Clear();
+    }
+
+    private void OnMouseDown()
+    {
+        if (!uiOpen)
+        {
+            uiOpen = true;
+            serveUI.gameObject.SetActive(true);
+        }
+        else
+        {
+            uiOpen = false;
+            serveUI.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnMouseEnter()
+    {
+        highlight.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        highlight.SetActive(false);
     }
 }
