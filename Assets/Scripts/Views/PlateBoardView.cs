@@ -56,7 +56,7 @@ public class PlateBoardView : MonoBehaviour
         }
         if (prefabToSpawn != null)
         {
-            float heightOffset = 0.5f;
+            float heightOffset = 0.75f;
             int stackCount = plateView.spawnedIngredients.Count;
             Vector3 spawnPosition = plateView.transform.position + Vector3.up * (2f + heightOffset * stackCount);
             GameObject ingredient = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
